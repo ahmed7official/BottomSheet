@@ -8,8 +8,8 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 27
-        versionName "1.2.4"
-        buildConfigField "String", "VERSION_DATE", '"12 Nov 2018"'
+        versionName "1.2.5"
+        buildConfigField "String", "VERSION_DATE", '"4 Nov 2020"'
     }
 
     buildTypes {

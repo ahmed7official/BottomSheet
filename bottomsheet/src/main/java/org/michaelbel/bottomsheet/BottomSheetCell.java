@@ -72,6 +72,7 @@ public class BottomSheetCell extends LinearLayout {
         params1.rightMargin = Utils.dp(context, 16);
 
         iconView.setLayoutParams(params1);
+        iconView.setVisibility(GONE);
         addView(iconView);
 
         textView = new TextView(context);
@@ -99,17 +100,18 @@ public class BottomSheetCell extends LinearLayout {
             }
 
             iconView.setImageDrawable(res);
+            iconView.setVisibility(VISIBLE);
 
             LayoutParams params2 = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             params2.gravity = Gravity.START | Gravity.CENTER_VERTICAL;
-            params2.leftMargin = Utils.dp(getContext(), 72);
-            params2.rightMargin = Utils.dp(getContext(), 16);
+            params2.setMarginStart(Utils.dp(getContext(), 16));
+            params2.setMarginEnd(Utils.dp(getContext(), 16));
             textView.setLayoutParams(params2);
         } else {
             LayoutParams params2 = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             params2.gravity = Gravity.START | Gravity.CENTER_VERTICAL;
-            params2.leftMargin = Utils.dp(getContext(), 16);
-            params2.rightMargin = Utils.dp(getContext(), 16);
+            params2.setMarginStart(Utils.dp(getContext(), 16));
+            params2.setMarginEnd(Utils.dp(getContext(), 16));
             textView.setLayoutParams(params2);
         }
 
@@ -125,11 +127,13 @@ public class BottomSheetCell extends LinearLayout {
             }
 
             iconView.setImageDrawable(res);
+            iconView.setVisibility(VISIBLE);
+
 
             LayoutParams params2 = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             params2.gravity = Gravity.START | Gravity.CENTER_VERTICAL;
-            params2.leftMargin = Utils.dp(getContext(), 72);
-            params2.rightMargin = Utils.dp(getContext(), 16);
+            params2.setMarginStart(Utils.dp(getContext(), 16));
+            params2.setMarginEnd(Utils.dp(getContext(), 16));
             textView.setLayoutParams(params2);
         } else {
             LayoutParams params2 = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
