@@ -21,17 +21,18 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.ColorInt;
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 
 /**
  * Date: 17 FEB 2018
@@ -41,7 +42,7 @@ import android.widget.TextView;
  */
 
 @SuppressWarnings("all")
-public class BottomSheetCell extends FrameLayout {
+public class BottomSheetCell extends LinearLayout {
 
     private Paint paint;
     private int cellHeight;
@@ -52,6 +53,7 @@ public class BottomSheetCell extends FrameLayout {
 
     public BottomSheetCell(Context context) {
         super(context);
+        setOrientation(LinearLayout.HORIZONTAL);
 
         if (paint == null) {
             paint = new Paint();
